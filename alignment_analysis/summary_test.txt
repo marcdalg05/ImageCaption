@@ -1,0 +1,46 @@
+Anàlisi d'alineació CLIP - Split: test
+Generat: 2026-05-22 16:20:33
+============================================================
+
+RESUM GENERAL
+  Mostres totals         : 932
+  Mostres processades    : 932
+  Sense caption          : 0
+  Errors                 : 0
+
+ALINEACIÓ CLIP vs SOLUTION_INDEX
+  ✅ Correctes (CLIP = solució) :    218  (23.4%)
+  ❌ Incorrectes (CLIP ≠ solució):    714  (76.6%)
+
+CLIP SCORES (mitjana de paràgrafs)
+  Score imatge solució:
+    Min    : 0.1821
+    Max    : 0.3581
+    Mitjà  : 0.2669
+    Mediana: 0.2680
+
+  Score imatge predita per CLIP:
+    Min    : 0.2114
+    Max    : 0.3581
+    Mitjà  : 0.2827
+    Mediana: 0.2822
+
+  Gap (score_predicció - score_solució) als mismatches:
+    Min    : 0.0001
+    Max    : 0.0975
+    Mitjà  : 0.0205
+    Mediana: 0.0176
+
+  Distribució del gap:
+    gap >= 0.01:    513 mostres (71.8%)
+    gap >= 0.02:    313 mostres (43.8%)
+    gap >= 0.05:     32 mostres (4.5%)
+    gap >= 0.10:      0 mostres (0.0%)
+    gap >= 0.20:      0 mostres (0.0%)
+
+INTERPRETACIÓ
+  Un 76.6% de les mostres tenen una caption que
+  CLIP considera més afí a una imatge diferent de la solució.
+  Això suggereix que el text no sempre descriu la imatge
+  'correcta' del dataset, o que la relació és narrativa/contextual
+  en lloc de purament visual.
